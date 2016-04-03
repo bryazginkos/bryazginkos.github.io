@@ -1,0 +1,14 @@
+{
+  "name": "bryazginkos.github.io",
+  "homepage": "https://github.com/bryazginkos/bryazginkos.github.io",
+  "authors": [
+    "Konstantin <bryazginkos@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}
