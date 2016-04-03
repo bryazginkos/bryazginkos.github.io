@@ -30,6 +30,12 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+//body {
+//  background-image: url("/images/design/beach.jpg");
+//  background-size: cover;
+//  background-repeat: no-repeat;
+//}
+
 
 
 // Use media queries like this:
@@ -52,5 +58,6 @@ $on-laptop:        800px;
         "_sass/base",
         "_sass/layout",
         "_sass/syntax-highlighting",
+        "_sass/nav",
         "bower_components/bootstrap-sass/assets/stylesheets/bootstrap"
 ;
