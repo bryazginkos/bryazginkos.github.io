@@ -12,6 +12,9 @@ layout: default
     <h2>
         <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
+    {% for posttag in post.tags %}
+    #{{posttag}}
+    {% endfor %}
 </li>
 {% endfor %}
 </ul>
