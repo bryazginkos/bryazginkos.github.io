@@ -7,8 +7,28 @@
 $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 .cool-font {
-  font-family: "PT Serif";
+  font-family: 'PT Serif', serif;
   font-size: 20px;
+}
+
+.post-link {
+  font-size: 25px;
+}
+
+.post-date {
+  color: green;
+}
+
+.post-more {
+  font-size: 21px;
+}
+
+.post-tag {
+  color: darkred;
+}
+
+.post-item {
+  margin-bottom: 45px;
 }
 
 
