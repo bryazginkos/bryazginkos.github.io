@@ -31,6 +31,11 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   margin-bottom: 45px;
 }
 
+.blog-desc {
+  margin-top: 30px;
+  color: #5e5e5e;
+}
+
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
