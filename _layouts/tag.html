@@ -2,19 +2,21 @@
 layout: default
 ---
 
-<h1>#{{ page.tag }}</h1>
+<h2>Posts with tag: <span class="post-tag">#{{ page.tag }}</span></h2>
 
-<ul class="">
 {% for post in site.tags[page.tag] %}
-<li>
-    <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
-    <p>{{ post.excerpt }}</p>
-    <h2>
-        <a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    {% for posttag in post.tags %}
-    #{{posttag}}
-    {% endfor %}
-</li>
+    <div class="post-item">
+        <div>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </div>
+        <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+        <p>{{ post.excerpt }}</p>
+        <p>
+            <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+        </p>
+
+        {% for posttag in post.tags %}
+        <span class="post-tag">#{{posttag}}</span>
+        {% endfor %}
+    </div>
 {% endfor %}
-</ul>
