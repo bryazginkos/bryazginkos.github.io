@@ -9,6 +9,7 @@
   "moduleType": [],
   "license": "MIT",
   "dependencies": {
-    "bootstrap-sass": "^3.3.6"
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome-bower": "^4.5.0"
   }
 }
