@@ -76,6 +76,11 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   align-items: center;
 }
 
+.framework-logo {
+  height: 30px;
+  float: right;
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "_sass/syntax-highlighting",
