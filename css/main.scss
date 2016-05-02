@@ -41,6 +41,10 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   cursor: pointer;
 }
 
+.contact:hover {
+  text-decoration: none;
+}
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -59,6 +63,18 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   margin-bottom: 40px;
 }
 
+.jumbotron {
+  width: 450px;
+}
+
+.transparent.jumbotron {
+  background-color: transparent;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
