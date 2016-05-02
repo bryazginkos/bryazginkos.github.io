@@ -81,6 +81,10 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   float: right;
 }
 
+.width-80 {
+  width: 80%;
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "_sass/syntax-highlighting",
