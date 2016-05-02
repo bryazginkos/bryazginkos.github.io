@@ -7,10 +7,10 @@ permalink: /contact/
     <div class="container">
         <div class="row vcenter">
             <div class="col-md-6">
-                <a href="https://www.linkedin.com/in/bkos91"><i class="fa contact fa-2x fa-linkedin-square"></i>LinkedIn</a>
+                <a href="https://www.linkedin.com/in/bkos91" target="_blank"><i class="fa contact fa-2x fa-linkedin-square"></i>LinkedIn</a>
             </div>
             <div class="col-md-6">
-                <a href="https://www.facebook.com/bryazgin.kos"><i class="fa contact fa-2x fa-facebook"></i>Facebook</a>
+                <a href="https://www.facebook.com/bryazgin.kos" target="_blank"><i class="fa contact fa-2x fa-facebook"></i>Facebook</a>
             </div>
         </div>
         <div class="row vcenter">
@@ -18,7 +18,7 @@ permalink: /contact/
                 <a href="skype:bryazginkos?chat"><i class="fa contact fa-2x fa-skype"></i>bryazginkos</a>
             </div>
             <div class="col-md-6">
-                <a href="http://vk.com/bkos91"><i class="fa contact fa-2x fa-vk"></i>Vkontakte</a>
+                <a href="http://vk.com/bkos91" target="_blank"><i class="fa contact fa-2x fa-vk"></i>Vkontakte</a>
             </div>
         </div>
         <div class="row vcenter">
