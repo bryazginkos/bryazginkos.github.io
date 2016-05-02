@@ -3,7 +3,7 @@ layout: default
 title: Contact
 permalink: /contact/
 ---
-<div class="space-down jumbotron transparent center-block">
+<div class="jumbotron transparent center-block">
     <div class="container">
         <div class="row vcenter">
             <div class="col-md-6">

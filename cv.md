@@ -4,9 +4,9 @@ title: Bryazgin Konstantin
 permalink: /cv/
 ---
 
-You can see below the list of frameworks and technologies which I used in different projects.
+<p>You can see below the list of frameworks and technologies which I used in different projects.
  Every day I continue improving my skills by expanding my technology stack and
-  deeper studying familiar frameworks.
+  deeper studying familiar frameworks. </p>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -115,7 +115,7 @@ You can see below the list of frameworks and technologies which I used in differ
         </div>
     </div>
 </div>
-
-Of course, knowing technologies is not sufficient condition to create a good product. Finishing every
+<p></p>
+<p>Of course, knowing technologies is not sufficient condition to create a good product. Finishing every
 issue I always try to summarize obtained experience in different areas to improve quality of
-next products.
+next products.</p>

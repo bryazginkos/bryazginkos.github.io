@@ -13,7 +13,7 @@ Almost every day I deal with different issues I have to solve.
  Also this blog performs a representative function for employers
  and partners. </p>
 
-<p class="text-center space-down">
+<p class="text-center">
  I also have old blog: <a href="http://kosdev.ru" target="_blank">
  http://kosdev.ru
  </a>
