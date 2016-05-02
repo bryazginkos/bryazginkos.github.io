@@ -3,16 +3,18 @@ layout: default
 ---
 <div>
     <h3>{{ page.title }}</h3>
-    <p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {{ page.date | date: "%b %-d, %Y" }}
-    </time>
+
+    <p class="post-date">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%b %-d, %Y" }}
+        </time>
     </p>
 
-  <div class="" itemprop="articleBody">
-    {{ content }}
-  </div>
+    <div>
+        {{ content }}
+    </div>
 
-  {% for posttag in page.tags %}
-  <span class="post-tag"> #{{posttag}}</span>
-  {% endfor %}
+    {% for posttag in page.tags %}
+    <span class="post-tag"> #{{posttag}}</span>
+    {% endfor %}
 </div>

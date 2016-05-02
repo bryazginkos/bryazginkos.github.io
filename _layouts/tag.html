@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div>
-<h3 class="text-right tag-post-label">Posts with tag: <span class="post-tag">#{{ page.tag }}</span></h3>
-{% for post in site.tags[page.tag] %}
+    <h3 class="text-right tag-post-label">Posts with tag: <span class="post-tag">#{{ page.tag }}</span></h3>
+    {% for post in site.tags[page.tag] %}
     <div class="post-item">
         <div>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -19,5 +19,5 @@ layout: default
         <span class="post-tag">#{{posttag}}</span>
         {% endfor %}
     </div>
-{% endfor %}
+    {% endfor %}
 </div>
