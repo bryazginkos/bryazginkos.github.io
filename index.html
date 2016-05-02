@@ -16,7 +16,9 @@ layout: default
         </p>
 
         {% for posttag in post.tags %}
-        <span class="post-tag">#{{posttag}}</span>
+        <a class="btn btn-success btn-xs tag-btn" href="/tag/{{posttag}}/">
+            #{{ posttag | replace:'-', ' ' }}
+        </a>
         {% endfor %}
     </div>
     {% endfor %}

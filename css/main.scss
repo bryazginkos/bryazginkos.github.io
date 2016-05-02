@@ -85,6 +85,10 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   width: 80%;
 }
 
+.tag-btn.btn {
+  font-size: 15px;
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "_sass/syntax-highlighting",
