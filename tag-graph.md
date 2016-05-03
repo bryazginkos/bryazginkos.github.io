@@ -1,0 +1,5 @@
+---
+layout: tag
+tag: graph
+permalink: /tag/graph/
+---

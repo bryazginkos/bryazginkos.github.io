@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "Seating algorithm"
+date:   2016-04-03 14:30:39 +0600
+tags: algorithm graph 
+---
+
+At the beginning of 2013 I and my future wife prepared our wedding. A lot of time was spent to create a seating plan 
+for guests. We have about 50 guests and 8 tables. Our goal was to provide comfort for every person at every table.
+ For example, families need to seat together, young people like to be with young, tables must be gender balanced. 
+ We've solved this problem with Photoshop model you see below. Moving "persons" between tables by computer mouse led us
+ to good result and wedding was excellent. But does exist algorithm to do it automatically?
+![Seating plan](/images/wedding/plan.jpg){: .center-block}
+
+Next year I decided to create an application which automatically creates seating plan by table configuration and 
+relation table. After brief analysis, I looked at this problem as a problem of graph partitioning. Guests are nodes,
+their relations are edges. The weight edge shows how strong two persons want to be at the same table. The problem
+is to divide this graph into small graphs with defined sizes with condition: 
+   
+![Seating plan](/images/wedding/max.png){: .center-block}
+
+I've tested some algorithms and found this one as best. 
+Before explaining it, I have to write some necessary statements:  
+   
+* The number of people can be lower than places, that's why we have to use "empty" or "null" people.
+* The relation between two guests is a number. Positive value means they want to seat together, Negative - don't want. 
+ The absolute value shows how strong are their wishes. Zero is neutral relation. 
+* To simplify the problem all relations are symmetric.
+* Everybody has zero (neutral) relation with empty (null) guest.
+* The table estimation is the sum of all relations between all people at this table.
+* The goal of algorithm is to create such seating plan, that the sum of table estimations is maximum.
+
+To avoid misunderstanding I show small example. There are four guests: A, B, C and D. A is a friend of B. C is a 
+ friend of D. They have such table of relations:
+
+![Relations table](/images/wedding/relations.jpg){: .center-block}
+
+If it is needed to seat them at 2 two-seater tables, the best solution is to seat A with B and C with D.
+ The sum of all tables estimation is 2.
+ 
+### Algorithm description
+
+The core of algorithm is next actions:
+
+1. Place all guests at one big table.
+2. Divide this table into two nearly same size parts considering guests interests.
+
+The result of these actions is two tables which also can be processed by the same actions. So one big table 
+iteration by iteration divides into a small ones until the all tables are not corresponding to input tables.
+The problem is how to do action #2.
+
+I suggest to do it in this way:
+
+1. Divide the table into two nearly the same size parts. (Considering that last iteration must divide a table
+ into two real tables from input)
+2. Calculate two params for everybody:
+ * ![Mi](/images/wedding/mi.png) - The sum of relations to neighbors
+ * ![Ti](/images/wedding/ti.png) - The sum of relations to people from another table
+3. Iterate all possible pairs to change each other places and calculate special parameter ![Gij](/images/wedding/gij.png)
+  using this formula:
+  
+![Gij = -Mi + Ti — Mj + Tj — 2 Rij](/images/wedding/gformula.png){: .center-block}
+
+![Rij](/images/wedding/rij.png) is relation between i and j. It is easy to check, that ![Gij](/images/wedding/gij.png) 
+is a benefit of two tables sum estimation if one swaps guests i and j.
+  
+4. Find a pair with maximum ![Gij](/images/wedding/gij.png) and neither i and j was touched at this iteration. If it 
+is negative, nothing can be done - we have the best possible division. If it's positive, we swap them. Then goto 2. 
+(But iteration still the same!!!)
+
+Repeating steps 2 - 4 leads to moment, when nobody can be found for change. It happens because of two reasons
+ (one is sufficient):
+
+* There are no pairs with positive ![Gij](/images/wedding/gij.png) 
+* All positive ![Gij](/images/wedding/gij.png) belong to marked guests who have already changed table at this iteration.
+
+This moment is the end of iteration. After this moment we delete all marks and go back to step 2. The number of iterations
+is a parameter of the algorithm.
+
+
+ 
+ 
